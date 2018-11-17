@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.meet.dao.NewsMapper">
+    <select id="getDetailCount" resultType="int">
+        select count(`id`) from `news_detail`
+    </select>
+
+    <select id="getAllDetail" resultType="Detail">
+        select * from `news_detail` limit #{pageNum},#{pageSize}
+    </select>
+</mapper>
